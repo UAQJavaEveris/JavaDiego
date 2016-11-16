@@ -2,22 +2,16 @@ package mx.com.everis.tallerjava.exception;
 
 public class Exceptiones {
 	
-	public static void Regla1(){
+	public static void Cinco(){
 		
-		System.out.println("se cumplio la regla 1: el arreglo contiene elementos diferentes del tipo entero o sobrepasa de 5 elementos");
+		System.out.println("El arreglos contiene 5 elementos");
 	}
 	
-	public static void Regla2(){
-		System.out.println("se cumplio la regla 2: un arreglo no puede contener valores mayores a 9");
+	public static void Mayor(){
+		System.out.println("El arreglo tiene numeros mayores de 9");
 	}
 	
-	public static void Regla3(){
-		System.out.println("se incumplio la regla 3: un array no puede contener valores negativos");
+	public static void Negativo(){
+		System.out.println("El arreglo no puede tener numeros negativos");
 	}
-	
-	public static void termino(){
-		System.out.println("Proceso terminado....");
-
-	}
-
 }

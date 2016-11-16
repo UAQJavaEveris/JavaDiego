@@ -11,7 +11,7 @@ public class Testing{
 
 		Scanner S = new Scanner(System.in);
 
-		Exceptiones obj = new Exceptiones();
+		Exceptiones ex = new Exceptiones();
 		
 
 			try{
@@ -25,7 +25,7 @@ public class Testing{
 						
 			}catch(Exception e){
 				System.out.println("");
-				obj.Regla1();
+				ex.Cinco();
 				
 			}finally{
 
@@ -38,7 +38,7 @@ public class Testing{
 					}
 
 				}catch(Exception e){
-					obj.Regla2();
+					ex.Mayor();
 				}
 				finally{
 
@@ -51,10 +51,10 @@ public class Testing{
 						}
 						
 					}catch(Exception e){
-						obj.Regla3();
+						ex.Negativo();
 					}
 					finally{
-						obj.termino();
+						System.out.println("Final");
 					}
 				}
 			}
