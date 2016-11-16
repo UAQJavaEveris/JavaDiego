@@ -8,7 +8,7 @@ public class Arreglos {
 	int valores [] = {1,2,3};
 	double decimales [] = {1.1,2.3,2.1};
 	Double decimales2[] = {new Double(2.1), new Double(1.1)};
-	static Persona personas [] = {new Persona("Diego","Arellano","22") };
+	static Persona personas [] = {new Persona("Diego","Arellano",22) };
 	
 	
 	public static void main(String args[]){
