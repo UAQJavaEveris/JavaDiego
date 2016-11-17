@@ -3,6 +3,11 @@ package mx.com.everis.tallerjava.manejocadena;
 public class TestCadena {
 	
 	public static void main(String[] args){
+		
+		/**
+		 * Equals: compara loque esta adentro de memoria
+		 * ==: Compara direccion de memoria
+		 */
 		String nombre = "Diego";
 		String nombre2 = new String ("Diego");
 		
