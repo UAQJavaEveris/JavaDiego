@@ -1,4 +1,5 @@
 package mx.com.everis.tallerjava.manejocadena;
+import java.util.Random;
 
 public class TestCadena {
 	
