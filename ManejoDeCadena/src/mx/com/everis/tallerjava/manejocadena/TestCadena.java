@@ -41,6 +41,7 @@ public class TestCadena {
 		System.out.println(text2);
 		
 		System.out.println("Posicion : "+text2.indexOf("p"));
+		
 	}
 
 }
