@@ -24,7 +24,7 @@ public class Archivos {
         File archivo = new File(ruta);
         
         BufferedWriter bw;
-        
+        //Verifica si el archivo existe o no existe si no lo crea.
         if(archivo.exists()) {
             bw = new BufferedWriter(new FileWriter(archivo));
             System.out.println("El archivo ya estaba creado...");
@@ -33,13 +33,14 @@ public class Archivos {
             System.out.println("El archivo se acaba de crear");
         }
         
-        
+        //Guarda un texto ingresado por el usuario.
         System.out.println("Introdusca un texto");
         cadena = leer.nextLine();
-        
         bw.write(cadena);
-        
         bw.close();
+        
+        
+        //Imprime lo que contiene el archivo
         
         FileReader LeerArchivo = new FileReader(archivo);
         BufferedReader leerArchivoT = new BufferedReader(LeerArchivo);
