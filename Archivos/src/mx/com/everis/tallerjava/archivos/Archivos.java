@@ -17,10 +17,10 @@ public class Archivos {
 	public static void main(String[] args) throws IOException{
 		
 		Scanner leer = new Scanner(System.in);
-		Scanner guardar = null;
 		String cadena = "";
 		String texto = "";
 		String ruta = "C:\\Users\\Diego\\Documents\\tallerjava\\holamundo.txt";
+		
         File archivo = new File(ruta);
         
         BufferedWriter bw;
@@ -49,5 +49,11 @@ public class Archivos {
         }
 		
         bw.close();
+        //Verifica si es un directorio
+        if (archivo.isDirectory()) {
+			System.out.println("Es un directorio");
+		}else{
+			System.out.println("Es un archivo");
+		}
 	}
 }
