@@ -4,6 +4,6 @@ public class MiHiloThread extends Thread{
 	
 	@Override
 	public void run(){
-		System.out.println("Mi hilo con clase Thread");
+		System.out.println("Mi hilo con clase Thread : "+Thread.currentThread());
 	}
 }

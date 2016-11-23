@@ -4,7 +4,7 @@ public class MiHiloRunnable implements Runnable{
 	
 	@Override
 	public void run(){
-		System.out.println("Mi hilocon la interfaz Ruunable");
+		System.out.println("Mi hilo con la interfaz Ruunable : "+Thread.currentThread());
 	}
 
 }
