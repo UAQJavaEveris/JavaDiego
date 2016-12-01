@@ -1,8 +1,13 @@
 function validarF(){ 
-   	//valido el nombre 
+   	
    	if (document.Fvalida.name.value.length==0){ 
-      	alert("Tiene que escribir su nombre") 
+      	alert("Escribre tu nombre") 
       	document.Fvalida.name.focus() 
+      	return 0; 
+   	} 
+   	if (document.Fvalida.pass.value.length==0){ 
+      	alert("Introduce un password") 
+      	document.Fvalida.pass.focus() 
       	return 0; 
    	} 
 }
