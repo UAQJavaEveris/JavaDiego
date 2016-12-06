@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from SaludosService WSDL service -->
+
+  <service name="Saludos" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.tallerjava.everis.mx.com"/>
+      <parameter name="wsdlServiceElement" value="SaludosService"/>
+      <parameter name="schemaQualified" value="http://service.tallerjava.everis.mx.com"/>
+      <parameter name="wsdlServicePort" value="Saludos"/>
+      <parameter name="className" value="com.mx.everis.tallerjava.service.Saludos"/>
+      <parameter name="wsdlPortType" value="Saludos"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://service.tallerjava.everis.mx.com" xmlns:retNS="http://service.tallerjava.everis.mx.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getSaludo" qname="operNS:getSaludo" returnQName="retNS:getSaludoReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://service.tallerjava.everis.mx.com" xmlns:retNS="http://service.tallerjava.everis.mx.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getSaludoName" qname="operNS:getSaludoName" returnQName="retNS:getSaludoNameReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://service.tallerjava.everis.mx.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:nombre" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="getSaludo getSaludoName"/>
+
+  </service>
+</deployment>

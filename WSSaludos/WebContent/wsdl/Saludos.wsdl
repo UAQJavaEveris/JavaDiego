@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.tallerjava.everis.mx.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.tallerjava.everis.mx.com" xmlns:intf="http://service.tallerjava.everis.mx.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.tallerjava.everis.mx.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getSaludo">
+    <complexType/>
+   </element>
+   <element name="getSaludoResponse">
+    <complexType>
+     <sequence>
+      <element name="getSaludoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSaludoName">
+    <complexType>
+     <sequence>
+      <element name="nombre" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSaludoNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getSaludoNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getSaludoRequest">
+
+      <wsdl:part element="impl:getSaludo" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSaludoResponse">
+
+      <wsdl:part element="impl:getSaludoResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSaludoNameResponse">
+
+      <wsdl:part element="impl:getSaludoNameResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSaludoNameRequest">
+
+      <wsdl:part element="impl:getSaludoName" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Saludos">
+
+      <wsdl:operation name="getSaludo">
+
+         <wsdl:input message="impl:getSaludoRequest" name="getSaludoRequest"/>
+
+         <wsdl:output message="impl:getSaludoResponse" name="getSaludoResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSaludoName">
+
+         <wsdl:input message="impl:getSaludoNameRequest" name="getSaludoNameRequest"/>
+
+         <wsdl:output message="impl:getSaludoNameResponse" name="getSaludoNameResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SaludosSoapBinding" type="impl:Saludos">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getSaludo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSaludoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSaludoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSaludoName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSaludoNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSaludoNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SaludosService">
+
+      <wsdl:port binding="impl:SaludosSoapBinding" name="Saludos">
+
+         <wsdlsoap:address location="http://localhost:8082/WSSaludos/services/Saludos"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
