@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://WService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WService/">
+
+<xs:element name="ActualizarPersonajes" type="tns:ActualizarPersonajes" />
+
+<xs:element name="ActualizarPersonajesResponse" type="tns:ActualizarPersonajesResponse" />
+
+<xs:element name="BuscarPersonajes" type="tns:BuscarPersonajes" />
+
+<xs:element name="BuscarPersonajesResponse" type="tns:BuscarPersonajesResponse" />
+
+<xs:element name="EliminarPersonaje" type="tns:EliminarPersonaje" />
+
+<xs:element name="EliminarPersonajeResponse" type="tns:EliminarPersonajeResponse" />
+
+<xs:element name="IngresarPersonajes" type="tns:IngresarPersonajes" />
+
+<xs:element name="IngresarPersonajesResponse" type="tns:IngresarPersonajesResponse" />
+
+<xs:complexType name="EliminarPersonaje">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarPersonajeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarPersonajes">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="nacionalidad" type="xs:string" minOccurs="0" />
+<xs:element name="empresa" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActualizarPersonajesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarPersonajes">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="nacionalidad" type="xs:string" minOccurs="0" />
+<xs:element name="empresa" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarPersonajesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarPersonajes">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarPersonajesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
