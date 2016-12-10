@@ -1,0 +1,16 @@
+Se realizo un web service que consumiera los datos en el cliente service, 
+el proyecto se realizo en NetBeans, la base de datos en mysql, tuve un problema 
+en eclipse que no me reconocia el tomcat,
+al final vi que tenia mal la version, pero ya habia hecho el proyecto en Netbenas.
+
+Anexo la tabla de mysql
+nombre de la base de datos personajesws
+
+Create table personajes (
+	id Int NOT NULL,
+	nombre Varchar(50),
+	nacionalidad Varchar(50),
+	empresa Varchar(50),
+ Primary Key (id)) ENGINE = MyISAM;
+ 
+ El modeleja de la base de datos lo realice en toad model.
